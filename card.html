@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card 示例</title>
+    <style>
+        .card {
+            width: 200px; /* 设置宽度为200px */
+            height: 100px; /* 设置高度为100px */
+            display: flex;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px; /* 减小内边距以适应新的尺寸 */
+            margin: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, transform 0.2s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transform: scale(1.05);
+        }
+
+        .card-icon img {
+            width: 48px; /* 设置图标宽度 */
+            height: 48px; /* 设置图标高度 */
+            margin-right: 20px;
+        }
+
+        .card-info {
+            flex: 1;
+            overflow: hidden;
+        }
+
+        .card-name {
+            font-size: 18px; /* 减小字体大小以适应新的尺寸 */
+            font-weight: bold;
+            margin-bottom: 5px; /* 减小底部边距以适应新的尺寸 */
+        }
+
+        .card-description {
+            font-size: 14px; /* 减小字体大小以适应新的尺寸 */
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="card" onclick="redirectToLink()" title="这是一个简单的卡片组件示例，当鼠标悬停时，它会显示完整的描述。">
+        <div class="card-icon">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c6/Sign-check-icon.png/768px-Sign-check-icon.png" alt="图标"> <!-- 替换为您的图标 URL -->
+        </div>
+        <div class="card-info">
+            <div class="card-name">示例卡片</div>
+            <div class="card-description">这是一个简单的卡片组件示例，当鼠标悬停时，它会显示完整的描述。这是一个简单的卡片组件示例，当鼠标悬停时，它会显示完整的描述。这是一个简单的卡片组件示例，当鼠标悬停时，它会显示完整的描述。</div>
+        </div>
+    </div>
+
+    <script>
+        var url = 'https://www.example.com';
+        function redirectToLink() {
+            window.open(url, "_blank");
+        }
+    </script>
+</body>
+</html>
